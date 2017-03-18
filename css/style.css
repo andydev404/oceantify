@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css?family=Baloo');
+
+* {
+    box-sizing: border-box
+}
+
+body,
+html {
+    height: 100%;
+    margin: 0;
+}
+
+.canvas {
+    background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/** Waves **/
+
+.wave__one,
+.wave__two,
+.wave__three,
+.wave__four {
+    position: absolute;
+    left: 0;
+    width: 100%;
+}
+
+.wave__one {
+    bottom: -20px;
+    z-index: 10;
+    -webkit-animation: waves1 1.1s linear infinite alternate;
+}
+
+.wave__two {
+    bottom: 10px;
+    z-index: 9;
+    -webkit-animation: waves2 1.3s linear infinite alternate;
+}
+
+.wave__three {
+    bottom: 23px;
+    z-index: 8;
+    -webkit-animation: waves3 2.5s linear infinite alternate;
+}
+
+.wave__four {
+    bottom: 83px;
+    z-index: 7;
+    -webkit-animation: waves4 4s linear infinite alternate;
+}
+
+
+/** Clouds **/
+
+.canvas h2{
+    font-family: 'Baloo', cursive;
+    font-size: 100px;
+    text-transform: uppercase;
+    color: #fff;
+    text-shadow: 0px 3px 0px rgba(204, 204, 204, 1);
+}
+
+.cloud-1,
+.cloud-2,
+.cloud-3,
+.cloud-4,
+.cloud-5,
+.cloud-6 {
+    width: 170px;
+    height: 50px;
+    background: #fff;
+    border-radius: 30px;
+    position: absolute;
+    top: 10%;
+    right: -20%;
+    animation: move 40s linear infinite;
+}
+
+.cloud-2 {
+    top: 50px;
+    opacity: 0.5;
+    animation: move 35s 5s linear infinite;
+}
+
+.cloud-3 {
+    top: 100px;
+    animation: move 60s 6s linear infinite;
+}
+
+.cloud-4 {
+    top: 150px;
+    opacity: 0.5;
+    animation: move 50s 7s linear infinite;
+}
+
+.cloud-5 {
+    top: 200px;
+    animation: move 53s 8s linear infinite;
+}
+
+.cloud-6 {
+    top: 250px;
+    animation: move 80s 9s linear infinite;
+}
+
+[class^="cloud-"]:before {
+    content: "";
+    position: absolute;
+    left: 12%;
+    width: 50px;
+    top: -20px;
+    height: 50px;
+    border-radius: 50%;
+    background: #fff;
+}
+
+[class^="cloud-"]:after {
+    content: "";
+    position: absolute;
+    background: #fff;
+    right: 18%;
+    top: -40px;
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+}
+
+
+/** Globe **/
+
+.globe{
+    position: absolute;
+    top: 10%;
+    right: -20%;
+    width: 100px;
+    animation: move 80s 2s linear infinite;
+}
+
+/** Ship **/
+
+.ship{
+    position: absolute;
+    bottom: 105px;
+    right: -20%;
+    z-index: 9;
+    width: 130px;
+    animation: move 80s linear infinite;
+}
+
+/** Animation clouds - globel - ship **/
+
+@-webkit-keyframes move {
+    0% {
+        right: -20%
+    }
+    100% {
+        right: 120%;
+    }
+}
+
+
+/** Animation waves **/
+
+@-webkit-keyframes waves1 {
+    0% {
+        bottom: -20px
+    }
+    100% {
+        bottom: 0px;
+    }
+}
+
+@-webkit-keyframes waves2 {
+    0% {
+        bottom: 10px
+    }
+    50% {
+        bottom: 5px;
+    }
+    100% {
+        bottom: 20px;
+    }
+}
+
+@-webkit-keyframes waves3 {
+    0% {
+        bottom: 23px
+    }
+    100% {
+        bottom: 40px;
+    }
+}
+
+@-webkit-keyframes waves4 {
+    0% {
+        bottom: 83px
+    }
+    20% {
+        bottom: 87px;
+    }
+    50% {
+        bottom: 90px;
+    }
+    100% {
+        bottom: 100px;
+    }
+}
