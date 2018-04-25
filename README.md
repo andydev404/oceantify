@@ -1,4 +1,4 @@
 # oceantify
-A small frontend proyect about animation
+A small frontend project about animation
 
 DEMO: https://andyfrontend.github.io/oceantify
